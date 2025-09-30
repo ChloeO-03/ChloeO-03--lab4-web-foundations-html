@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring HTML Elements</title>
+    
+    <!-- Style to make h1 blue as required -->
+    <style>
+        h1 {
+            color: blue;
+        }
+
+        p {
+            color: #262626; /* dark gray */
+        }
+        code {
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Script to display current date and time as required -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const now = new Date();
+            document.getElementById('current-datetime').textContent = now.toLocaleString();
+        });
+    </script>
+
+    <h1>Hello HTML Tags - Lab 4</h1>
+    <p><strong>Current Date and Time:</strong> <span id="current-datetime"></span></p>
+    <hr>
+    <p title="Did you mouse me?">Soon you will &hearts; HTML as much as I do!</p>
+
+    <p>Another paragraph here</p>
+    <p>And another!</p>
+    <p>I r e a l l y like WHITESPACE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;don't you?</p>
+
+    <pre>
+        What
+            about now?
+    </pre>
+
+    <!-- WARNING: marquee is deprecated but still works in some browsers -->
+    <p>This is fun isn't it?</p>
+
+    <!-- Custom elements for demonstration -->
+    <p>day ever!</p>
+    <p>It completely is a <b>great</b>great<b>great</b> day for writing HTML!</p>
+    <!-- Custom element as required with data-* attribute -->
+    <my-school data-founded="1949">University of San Diego</my-school>
+
+    <!-- address feature-->
+    <address>
+        <p>You can reach Chloe at:</p>
+        <ul>
+            <li><a href="https://example.com" target="_blank" rel="noopener">Website</a></li>
+            <li><a href="mailto:cogamba@sandiego.edu">Email</a></li>
+            <li><a href="tel:+5453678932">Phone</a></li>
+        </ul>
+    </address>
+
+    <!-- abbr feature-->
+    <p>
+        The <abbr title="Application Programming Interface">API</abbr> allows
+        developers to interact with a system, while the
+        <abbr title="Structured Query Language">SQL</abbr> language is commonly used
+        to query databases. Clear documentation of each
+        <abbr title="Application Programming Interface">API</abbr> helps teams
+        collaborate effectively.
+    </p>
+
+    <p>Contact the author of this page:</p>
+
+    <!-- address feature-->
+    <address>
+        <a href="mailto:cogamba@sandiego.edu">Email: cogamba@sandiego.edu</a><br>
+        <a href="tel:+5453678932">Phone: +1 (545) 367‑8932</a>
+    </address>
+
+    <!-- area feature-->
+    <img
+        src="https://via.placeholder.com/300x250"
+        usemap="#infographic"
+        alt="MDN infographic"
+    >
+
+    <map name="infographic">
+        <area
+            shape="poly"
+            coords="129,0,260,95,129,138"
+            href="https://developer.mozilla.org/docs/Web/HTTP"
+            alt="HTTP"
+            target="_blank" rel="noopener"
+        >
+        <area
+            shape="poly"
+            coords="260,96,209,249,130,138"
+            href="https://developer.mozilla.org/docs/Web/HTML"
+            alt="HTML"
+            target="_blank" rel="noopener"
+        >
+        <area
+            shape="poly"
+            coords="209,249,49,249,130,139"
+            href="https://developer.mozilla.org/docs/Web/JavaScript"
+            alt="JavaScript"
+            target="_blank" rel="noopener"
+        >
+        <area
+            shape="poly"
+            coords="48,249,0,96,129,138"
+            href="https://developer.mozilla.org/docs/Web/API"
+            alt="Web APIs"
+            target="_blank" rel="noopener"
+        >
+        <area
+            shape="poly"
+            coords="0,95,128,0,128,137"
+            href="https://developer.mozilla.org/docs/Web/CSS"
+            alt="CSS"
+            target="_blank" rel="noopener"
+        >
+    </map>
+
+    <!-- article feature-->
+    <article class="forecast">
+        <h2>Weather forecast for California</h2>
+
+        <article class="day-forecast">
+            <h3><time datetime="2025-08-03">03 August 2025</time></h3>
+            <p>Rain.</p>
+        </article>
+
+        <article class="day-forecast">
+            <h3><time datetime="2025-08-04">04 August 2025</time></h3>
+            <p>Periods of rain.</p>
+        </article>
+
+        <article class="day-forecast">
+            <h3><time datetime="2025-08-05">05 August 2025</time></h3>
+            <p>Heavy rain.</p>
+        </article>
+    </article>
+
+    <!-- aside feature-->
+    <article>
+        <h2>Salamanders and Frogs of the Pacific Northwest</h2>
+
+        <p>
+            Salamanders are a group of amphibians with a lizard-like appearance, including
+            short legs and a tail in both larval and adult forms.
+        </p>
+
+        <aside data-toxicity="very-high">
+            <p>
+                The Poison Dart Frog produces potent toxins that deter predators.
+                <cite>Source: National Wildlife Federation</cite>
+            </p>
+        </aside>
+
+        <p>
+            Several species of salamander inhabit the temperate rainforest of the Pacific
+            Northwest, including the Ensatina, the Northwestern Salamander, and various
+            frogs such as the Poison Dart Frog. Most of these amphibians are nocturnal and
+            hunt for insects, worms, and other small creatures.
+        </p>
+    </article>
+
+    <!-- audio feature-->
+    <figure>
+        <figcaption>Listen to a kitten cry:</figcaption>
+        <audio controls>
+            <source src="/shared-assets/audio/kitten-cry.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p><a href="/shared-assets/audio/kitten-cry.mp3" download>Download audio</a></p>
+    </figure>
+
+    <!-- b feature-->
+    <p>
+        Two of the most popular science courses offered by the school are
+        <b class="term">biology</b> (the study of living organisms and their interactions)
+        and <b class="term">astronomy</b> (the study of celestial objects and the universe).
+    </p>
+
+    <!-- blockquote feature-->
+    <h2>Famous Seaside Songs</h2>
+
+    <p>The English song: <em>Oh I do like to be beside the seaside</em></p>
+
+    <p>
+        Looks like this in Hebrew:
+        <span dir="rtl">אה, אני אוהב להיות ליד חוף הים</span>
+    </p>
+
+    <div>
+        <blockquote cite="https://www.gutenberg.org/ebooks/1342">
+            <p>
+                It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.
+            </p>
+        </blockquote>
+        <p>—Jane Austen, <cite>Pride and Prejudice</cite></p>
+    </div>
+
+    <!-- br feature-->
+    <p>
+        Across the quiet meadow<br>
+        Sunlight fades away,<br>
+        In every shadow<br>
+        Soft winds sway<br>
+        Gently the flowers bow;<br>
+        The deer are resting in the glade:<br>
+        Wait, soon like them now<br>
+        Your mind shall calm and stay.
+    </p>
+
+    <!-- button feature-->
+    <button class="subscribe styled" type="button">
+        Subscribe to Newsletter
+    </button>
+
+    <!-- caption feature-->
+    <table>
+        <caption>
+            Harry Potter and Voldemort facts
+        </caption>
+        <tr>
+            <td></td>
+            <th scope="col" class="harry">Harry Potter</th>
+            <th scope="col" class="voldemort">Voldemort</th>
+        </tr>
+        <tr>
+            <th scope="row">Role</th>
+            <td>Hero</td>
+            <td>Villain</td>
+        </tr>
+        <tr>
+            <th scope="row">Weapon</th>
+            <td>Wand</td>
+            <td>Dark Magic</td>
+        </tr>
+        <tr>
+            <th scope="row">Secret talent</th>
+            <td>Parseltongue (can talk to snakes)</td>
+            <td>Disguises and manipulation</td>
+        </tr>
+    </table>
+
+    <!-- cite feature-->
+    <figure>
+        <blockquote>
+            <p>
+                Call me Ishmael.
+            </p>
+        </blockquote>
+        <figcaption>
+            First sentence in
+            <cite><a href="https://www.gutenberg.org/ebooks/2701">Moby-Dick</a></cite>
+            by Herman Melville (Chapter 1).
+        </figcaption>
+    </figure>
+
+    <!-- code feature -->
+    <p>
+        The <code>pop()</code> method removes the last element from an array and returns that element.
+    </p>
+
+    <!-- data feature-->
+    <p>New Products:</p>
+    <ul>
+        <li><data value="601">Strawberry Yogurt</data></li>
+        <li><data value="602">Blueberry Yogurt</data></li>
+        <li><data value="603">Peach Yogurt</data></li>
+    </ul>
+
+    <!-- datalist feature-->
+    <label for="pizza-topping-choice">Choose a topping:</label>
+    <input list="pizza-toppings" id="pizza-topping-choice" name="pizza-topping-choice">
+
+    <datalist id="pizza-toppings">
+        <option value="Pepperoni">
+        <option value="Mushrooms">
+        <option value="Onions">
+        <option value="Green Peppers">
+        <option value="Olives">
+    </datalist>
+
+    <!-- dd feature-->
+    <p>Cryptids of Scotland:</p>
+
+    <dl>
+        <dt>Loch Ness Monster</dt>
+        <dd>A mysterious aquatic creature said to inhabit Loch Ness.</dd>
+
+        <dt>Kelpie</dt>
+        <dd>A shape-shifting water horse that haunts rivers and lochs.</dd>
+
+        <dt>Big Grey Man</dt>
+        <dd>A shadowy humanoid figure seen on the peaks of Ben MacDhui.</dd>
+    </dl>
+
+    <!-- del feature-->
+    <blockquote>
+        Success is <del>pure luck</del> <ins>hard work</ins>, and
+        <del>waiting</del> <ins>practicing</ins> turns potential into achievement.
+    </blockquote>
+
+    <!-- details feature-->
+    <details>
+        <summary>Fun Fact</summary>
+        The honeybee is the only insect that produces food eaten by humans.
+    </details>
+
+    <!-- dfn feature-->
+    <p>
+        A <dfn id="def-algorithm">algorithm</dfn> is a step-by-step procedure for
+        solving a problem or performing a computation.
+    </p>
+
+    <!-- dialog feature-->
+    <dialog open>
+        <p>Hello there! This is a quick dialog box.</p>
+        <button onclick="this.parentElement.close()">Close</button>
+    </dialog>
+
+    <!-- div feature-->
+    <div class="warning">
+        <img
+            src="/shared-assets/images/examples/bear.jpg"
+            alt="A large grizzly bear.">
+        <p>Warning: Grizzly bear in the area</p>
+    </div>
+
+    <!-- dl feature-->
+    <p>Cryptids of North America:</p>
+
+    <dl>
+        <dt>Bigfoot</dt>
+        <dd>A large, ape-like creature said to roam the forests of the Pacific Northwest.</dd>
+
+        <dt>Chupacabra</dt>
+        <dd>A mysterious creature rumored to attack livestock and drink their blood.</dd>
+
+        <dt>Mothman</dt>
+        <dd>A winged humanoid figure often associated with disaster sightings in West Virginia.</dd>
+    </dl>
+
+    <!-- dt feature-->
+    <p>Please use the following paint colors for the office renovation:</p>
+
+    <dl>
+        <dt>Forest Green (matte finish)</dt>
+        <dd>Accent wall</dd>
+
+        <dt>Sandstone (satin finish)</dt>
+        <dd>Main walls</dd>
+
+        <dt>Cloud White (semigloss finish)</dt>
+        <dd>Trim and doors</dd>
+    </dl>
+
+    <!-- em feature -->
+    <p>Finish your homework <em>today</em>!</p>
+
+    <p>We <em>really</em> need to talk about this.</p>
+
+    <p>This is <em>absolutely</em> amazing!</p>
+
+    <!-- fieldset feature -->
+    <form>
+        <fieldset>
+            <legend>Choose your favorite mythical creature</legend>
+
+            <input type="radio" id="dragon" name="creature" value="D">
+            <label for="dragon">Dragon</label><br>
+
+            <input type="radio" id="phoenix" name="creature" value="P">
+            <label for="phoenix">Phoenix</label><br>
+
+            <input type="radio" id="unicorn" name="creature" value="U">
+            <label for="unicorn">Unicorn</label>
+        </fieldset>
+    </form>
+
+    <!-- figcaption feature -->
+    <figure>
+        <img
+            src="/shared-assets/images/examples/lion.jpg"
+            alt="Lion resting in the savannah">
+        <figcaption>A lion resting in the savannah</figcaption>
+    </figure>
+
+    <!-- figure feature -->
+    <figure>
+        <img
+            src="/shared-assets/images/examples/giraffe.jpg"
+            alt="Giraffe in the savannah">
+        <figcaption>A giraffe grazing in the savannah</figcaption>
+    </figure>
+
+    <!-- footer feature -->
+    <article>
+        <h2>How to be a Pirate</h2>
+        <ol>
+            <li>Learn to talk like a pirate.</li>
+            <li>Wear an eye patch and a tricorn hat.</li>
+            <li>Practice walking the plank (safely!).</li>
+        </ol>
+        <footer>
+            <p>© 2025 Captain Blackbeard</p>
+        </footer>
+    </article>
+
+    <!-- form feature -->
+    <form action="#" method="get" class="form-example">
+        <div class="form-example">
+            <label for="username">Enter your username: </label>
+            <input type="text" name="username" id="username" required>
+        </div>
+        <div class="form-example">
+            <label for="phone">Enter your phone number: </label>
+            <input type="tel" name="phone" id="phone" required>
+        </div>
+        <div class="form-example">
+            <input type="submit" value="Register!">
+        </div>
+    </form>
+
+    <!-- h1-h4 feature -->
+    <h1>Birds</h1>
+    <h2>External morphology</h2>
+    <h3>Wings</h3>
+    <h4>Primary Feathers</h4>
+    <h4>Secondary Feathers</h4>
+    <h3>Legs</h3>
+    <h4>Thigh</h4>
+    <h4>Shank</h4>
+
+    <!-- header feature -->
+    <header>
+        <a class="logo" href="#">Majestic Birds Blog</a>
+    </header>
+
+    <article>
+        <header>
+            <h2>Owls</h2>
+            <time datetime="2025-09-15">09.15.2025</time>
+        </header>
+        <p>
+            I love owls <em>immensely</em>! Their wide eyes and silent flight make them
+            truly fascinating creatures.
+        </p>
+    </article>
+
+    <!-- hgroup replacement -->
+    <div class="title-group">
+        <h1>Dracula</h1>
+        <p class="subtitle">Or: The Vampire Count</p>
+    </div>
+    <p>
+        Count Dracula, a Transylvanian noble, has a dark ambition: to spread his vampiric
+        curse across Europe. But when Jonathan Harker arrives at his castle, he discovers
+        the true horror of Dracula's existence and the danger he poses to all who cross his path.
+    </p>
+
+    <hr>
+
+    <p>§2: The second rule of Hiking Club is: Pack plenty of water.</p>
+
+    <!-- i feature -->
+    <p>I glanced at it and thought <i>Unbelievable!</i></p>
+
+    <p>
+        <i>Canis</i> is a genus in the family <i>Canidae</i>; it includes wolves, dogs, and coyotes.
+    </p>
+
+    <p>
+        The term <i>latency</i> describes the delay before a transfer of data begins following an instruction.
+    </p>
+
+    <!-- iframe feature -->
+    <iframe
+        id="inlineFrameExample"
+        title="Inline Frame Example"
+        width="400"
+        height="250"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-73.9876%2C40.7306%2C-73.9850%2C40.7320&amp;layer=mapnik">
+    </iframe>
+
+    <!-- img feature -->
+    <img
+        class="fit-picture"
+        src="/shared-assets/images/examples/apple-slice.jpg"
+        alt="Apple slice atop a pile of other slices">
+
+    <!-- input feature -->
+    <label for="username2">Username (5 to 12 characters):</label>
+
+    <input
+        type="text"
+        id="username2"
+        name="username2"
+        required
+        minlength="5"
+        maxlength="12"
+        size="12">
+
+    <!-- ins feature -->
+    <p>&ldquo;Where's the report?&rdquo;</p>
+    <del>
+        <p>&ldquo;I'm still working on it.&rdquo;</p>
+    </del>
+    <ins cite="../project-guidelines.html" datetime="2025-09-01">
+        <p>&ldquo;The report is complete &hellip;&rdquo;</p>
+    </ins>
+
+    <!-- kbd feature -->
+    <p>
+        To save your document, press <kbd>Ctrl</kbd> + <kbd>S</kbd> on Windows or
+        <kbd>Command</kbd> + <kbd>S</kbd> on Mac.
+    </p>
+
+    <!-- label feature -->
+    <div class="preference">
+        <label for="chocolate">I like chocolate.</label>
+        <input type="checkbox" name="chocolate" id="chocolate">
+    </div>
+
+    <div class="preference">
+        <label for="strawberries">I like strawberries.</label>
+        <input type="checkbox" name="strawberries" id="strawberries">
+    </div>
+
+    <!-- legend feature -->
+    <fieldset>
+        <legend>Choose your favorite mythical creature</legend>
+
+        <input type="radio" id="dragon2" name="creature2" value="D">
+        <label for="dragon2">Dragon</label><br>
+
+        <input type="radio" id="phoenix2" name="creature2" value="P">
+        <label for="phoenix2">Phoenix</label><br>
+
+        <input type="radio" id="unicorn2" name="creature2" value="U">
+        <label for="unicorn2">Unicorn</label>
+    </fieldset>
+
+    <!-- li feature -->
+    <p>Gemini astronauts:</p>
+
+    <ul>
+        <li>Gus Grissom</li>
+        <li>John Young</li>
+        <li>Wally Schirra</li>
+        <li>James McDivitt</li>
+        <li>Ed White</li>
+    </ul>
+
+    <!-- link feature -->
+    <link href="/shared-assets/misc/link-element-example.css" rel="stylesheet">
+
+    <p>This text will be green as defined in the external stylesheet.</p>
+    <p style="color: orange">
+        The <code>style</code> attribute can override it, though.
+    </p>
+
+    <!-- main feature -->
+    <header>Penguin facts</header>
+
+    <main>
+        <p>
+            Penguins are a group of flightless birds mostly found in the Southern Hemisphere.
+            They are well-adapted to life in the water and cold climates.
+        </p>
+
+        <p>
+            Many species of penguin have a layer of dense feathers and a thick layer of fat
+            to keep them warm in icy waters.
+        </p>
+    </main>
+
+    <!-- map feature -->
+    <map name="infographic2">
+        <area
+            shape="poly"
+            coords="140,150,210,110,260,220,140,230"
+            href="https://developer.mozilla.org/docs/Web/HTML"
+            alt="HTML">
+        <area
+            shape="poly"
+            coords="140,150,140,230,10,220,60,110"
+            href="https://developer.mozilla.org/docs/Web/CSS"
+            alt="CSS">
+        <area
+            shape="poly"
+            coords="140,150,210,110,140,10,60,110"
+            href="https://developer.mozilla.org/docs/Web/JavaScript"
+            alt="JavaScript">
+    </map>
+
+    <img
+        usemap="#infographic2"
+        src="/shared-assets/images/examples/mdn-info2.png"
+        alt="MDN infographic">
+
+    <!-- mark feature -->
+    <p>Search results for "penguin":</p>
+
+    <hr>
+
+    <p>
+        Several species of <mark>penguin</mark> inhabit the icy regions of the Southern Hemisphere.
+    </p>
+
+    <p>
+        Most <mark>penguin</mark>s are excellent swimmers, feeding on fish, squid, and krill.
+    </p>
+
+    <!-- menu feature -->
+    <div class="news">
+        <a href="#">Scientists Discover New Coral Species in the Great Barrier Reef</a>
+        <menu>
+            <li><button id="save">Save for later</button></li>
+            <li><button id="share">Share this news</button></li>
+        </menu>
+    </div>
+
+    <!-- meter feature -->
+    <label for="battery">Battery level:</label>
+
+    <meter id="battery" min="0" max="100" low="20" high="80" optimum="90" value="65">
+        at 65/100
+    </meter>
+
+    <!-- nav feature -->
+    <nav class="crumbs">
+        <ol>
+            <li class="crumb"><a href="#">Musical Instruments</a></li>
+            <li class="crumb"><a href="#">Guitars</a></li>
+            <li class="crumb">StratoCaster X</li>
+        </ol>
+    </nav>
+
+    <h1>StratoCaster X</h1>
+    <p>
+        This electric guitar is perfect for beginners and pros alike. Its sleek design
+        and rich tone make it ideal for stage and studio performances.
+    </p>
+
+    <!-- noscript feature -->
+    <noscript>
+        <!-- anchor linking to external file -->
+        <a href="https://www.nationalgeographic.com/">Visit National Geographic</a>
+    </noscript>
+    <p>Fascinating!</p>
+
+    <!-- ol feature -->
+    <ol>
+        <li>Preheat the oven to 350°F (175°C).</li>
+        <li>Combine chopped apples, cinnamon, and sugar in a bowl.</li>
+        <li>Mix flour, oats, and baking powder in another bowl.</li>
+        <li>Stir both mixtures together until well blended.</li>
+        <li>Pour into a greased baking dish and bake for 25 minutes.</li>
+    </ol>
+
+    <!-- optgroup feature -->
+    <label for="dino-select">Choose a dinosaur:</label>
+    <select id="dino-select">
+        <optgroup label="Ceratopsians">
+            <option>Triceratops</option>
+            <option>Styracosaurus</option>
+            <option>Pachyrhinosaurus</option>
+        </optgroup>
+        <optgroup label="Stegosaurs">
+            <option>Stegosaurus</option>
+            <option>Kentrosaurus</option>
+            <option>Huayangosaurus</option>
+        </optgroup>
+    </select>
+
+    <!-- option feature -->
+    <label for="pet-select">Choose a pet:</label>
+
+    <select id="pet-select">
+        <option value="">--Please choose an option--</option>
+        <option value="rabbit">Rabbit</option>
+        <option value="turtle">Turtle</option>
+        <option value="ferret">Ferret</option>
+        <option value="canary">Canary</option>
+        <option value="iguana">Iguana</option>
+        <option value="betta">Betta Fish</option>
+    </select>
+
+    <!-- output feature -->
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="number" id="a" name="a" value="0"> +
+        <input type="number" id="b" name="b" value="0"> =
+        <output name="result" for="a b">0</output>
+    </form>
+
+    <!-- p feature -->
+    <p>
+        This is a simple paragraph of text in HTML. Paragraphs are used to group related sentences
+        together, making content easier to read. You can also include inline elements like
+        <em>emphasis</em>, <strong>strong importance</strong>, or <a href="#">links</a> within a paragraph.
+        For example, if you accidentally fed your cat a slice of pizza, you might write about it here,
+        and your readers will gasp in horror or laugh uncontrollably!
+    </p>
+
+    <!-- picture feature -->
+    <picture>
+        <source
+            srcset="/shared-assets/images/examples/mountain.jpg"
+            media="(orientation: portrait)">
+        <img src="/shared-assets/images/examples/beach.jpg" alt="A sunny beach scene">
+    </picture>
+
+    <!-- pre feature -->
+    <pre>
+Line 1: This text
+Line 2:   preserves spaces
+Line 3:     and line breaks exactly
+Line 4:       as typed in the HTML
+    </pre>
+
+    <!-- progress feature -->
+    <label for="download">Download progress:</label>
+
+    <progress id="download" max="100" value="45">45%</progress>
+
+    <!-- q feature -->
+    <p>
+        When Alice asks her smart speaker to play jazz, it replies:
+        <q cite="https://www.example.com/smart-speaker-quotes">
+            Sorry, I don't have any jazz playlists available right now.
+        </q>
+    </p>
+
+    <!-- rp feature -->
+    <ruby>
+        casa <rp>(</rp><rt>house</rt><rp>)</rp>
+        perro <rp>(</rp><rt>dog</rt><rp>)</rp>
+    </ruby>
+
+    <!-- rt feature -->
+    <ruby>
+        casa <rp>(</rp><rt>house</rt><rp>)</rp>
+        gato <rp>(</rp><rt>cat</rt><rp>)</rp>
+    </ruby>
+
+    <!-- ruby feature -->
+    <ruby>
+        mañana <rp>(</rp><rt>tomorrow</rt><rp>)</rp>
+    </ruby>
+
+    <!-- s feature -->
+    <p><s>The concert starts at 8 PM.</s></p>
+
+    <p>Cancelled!</p>
+
+    <!-- samp feature -->
+    <p>I tried running my program, and it displayed this amusing message:</p>
+
+    <p>
+        <samp>Error: Coffee not detected <br>Please insert a cup and try again</samp>
+    </p>
+
+    <!-- script feature -->
+    <script>
+        // Display an alert when the page loads
+        console.log("Script element demonstrated!");
+    </script>
+
+    <!-- search feature -->
+    <header>
+        <h1>Book Finder</h1>
+        <search>
+            <form action="./search/">
+                <label for="book">Find a Book</label>
+                <input type="search" id="book" name="q">
+                <button type="submit">Search</button>
+            </form>
+        </search>
+    </header>
+
+    <!-- section feature -->
+    <h1>Choosing a Banana</h1>
+
+    <section>
+        <h2>Introduction</h2>
+        <p>
+            This document provides a guide to help with the important task of choosing
+            the perfect banana.
+        </p>
+    </section>
+
+    <section>
+        <h2>Criteria</h2>
+        <p>
+            There are many criteria to consider when selecting a banana — ripeness, size,
+            color, sweetness, and firmness.
+        </p>
+    </section>
+
+    <!-- select feature -->
+    <label for="pet-select2">Choose a pet:</label>
+
+    <select name="pets" id="pet-select2">
+        <option value="">--Please choose an option--</option>
+        <option value="rabbit">Rabbit</option>
+        <option value="turtle">Turtle</option>
+        <option value="ferret">Ferret</option>
+        <option value="canary">Canary</option>
+        <option value="iguana">Iguana</option>
+        <option value="betta">Betta Fish</option>
+    </select>
+
+    <!-- small feature -->
+    <p>
+        OpenLearn is a platform for free educational resources and online courses in
+        various subjects.
+    </p>
+
+    <hr>
+
+    <p>
+        <small>
+            The content is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+        </small>
+    </p>
+
+    <!-- source feature -->
+    <video controls width="250" height="200" muted>
+        <source src="/shared-assets/videos/sunset.webm" type="video/webm">
+        <source src="/shared-assets/videos/sunset.mp4" type="video/mp4">
+        Download the
+        <a href="/shared-assets/videos/sunset.webm">WEBM</a>
+        or
+        <a href="/shared-assets/videos/sunset.mp4">MP4</a>
+        video.
+    </video>
+
+    <!-- span feature -->
+    <p>
+        Add the <span class="ingredient">spinach</span>,
+        <span class="ingredient">walnuts</span> and
+        <span class="ingredient">parmesan cheese</span> to a blender and blend into a paste.
+    </p>
+
+    <p>
+        Gradually add the <span class="ingredient">olive oil</span> while running the
+        blender slowly.
+    </p>
+
+    <!-- strong feature -->
+    <p>
+        ... the most important rule, the rule you can never forget, no matter how many times
+        she asks, no matter how much she pleads:
+        <strong>always wear sunscreen before going outside</strong>.
+    </p>
+
+    <p>
+        This text will be dark gray. External CSS sets the default style for paragraphs.
+    </p>
+
+    <p style="color: purple">
+        The <code>style</code> attribute can override it, giving this paragraph a purple color.
+    </p>
+
+    <!-- sub feature -->
+    <p>
+        Water is chemically represented as H<sub>2</sub>O, essential for all known forms of life.
+    </p>
+
+    <!-- summary feature -->
+    <details>
+        <summary>
+            I speak without a mouth and hear without ears. I have nobody, but I come alive with wind. What am I?
+        </summary>
+        An echo.
+    </details>
+
+    <!-- sup feature -->
+    <p>
+        The <em>quadratic formula</em> is often expressed as the following equation:
+    </p>
+
+    <p>
+        <var>x</var> = <var>-b ± √(b<sup>2</sup> - 4ac)</var> / <var>2a</var>
+    </p>
+
+    <!-- table feature -->
+    <table>
+        <caption>
+            Back-end web developer course 2025
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col">Person</th>
+                <th scope="col">Most interest in</th>
+                <th scope="col">Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Alex</th>
+                <td>Node.js</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <th scope="row">Maya</th>
+                <td>Databases</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <th scope="row">Jamal</th>
+                <td>API design</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <th scope="row">Sophie</th>
+                <td>Server optimization</td>
+                <td>29</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row" colspan="2">Average age</th>
+                <td>28</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- tbody feature -->
+    <table>
+        <caption>
+            Council budget (in £) 2025
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col">Items</th>
+                <th scope="col">Expenditure</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Books</th>
+                <td>5,000</td>
+            </tr>
+            <tr>
+                <th scope="row">Computers</th>
+                <td>15,000</td>
+            </tr>
+            <tr>
+                <th scope="row">Office Supplies</th>
+                <td>2,000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Totals</th>
+                <td>22,000</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- td feature -->
+    <table>
+        <caption>
+            Alien football stars 2025
+        </caption>
+        <tr>
+            <th scope="col">Player</th>
+            <th scope="col">Gloobles</th>
+            <th scope="col">Za'taak</th>
+        </tr>
+        <tr>
+            <th scope="row">Zyra-X</th>
+            <td>12</td>
+            <td>5,432</td>
+        </tr>
+        <tr>
+            <th scope="row">Qorvax Prime</th>
+            <td>8</td>
+            <td>6,789</td>
+        </tr>
+        <tr>
+            <th scope="row">Luna Star</th>
+            <td>10</td>
+            <td>7,101</td>
+        </tr>
+    </table>
+
+    <!-- template feature -->
+    <table id="producttable">
+        <thead>
+            <tr>
+                <th>UPC_Code</th>
+                <th>Product_Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>123456789012</td>
+                <td>Chocolate Bar</td>
+            </tr>
+            <tr>
+                <td>987654321098</td>
+                <td>Organic Apple Juice</td>
+            </tr>
+            <tr>
+                <td>564738291056</td>
+                <td>Almond Cookies</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <template id="productrow">
+        <tr>
+            <td class="record"></td>
+            <td></td>
+        </tr>
+    </template>
+
+   
